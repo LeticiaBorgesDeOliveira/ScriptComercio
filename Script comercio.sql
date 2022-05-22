@@ -78,32 +78,7 @@ INSERT INTO VENDEDORES VALUES(NULL,'IVONE','F',57789.78,44774.87,68665.90);
 INSERT INTO VENDEDORES VALUES(NULL,'JOAO','M',4785.78,66478.87,6887.90);
 INSERT INTO VENDEDORES VALUES(NULL,'CELIA','F',89667.78,57654.87,5755.90);
 
---Exercicios praticos
 
---Quem vendeu menos
---ORDENANDO PELO MENOR VALOR VENDIDO EM MARÇO
-select nome, marco
-from vendedores
-order by marco;
-
---SUBQUERY SELECIONANDO O MENOR VALOR DAS VENDAS DE MARCO E OS DADOS DO VENDEDOR
-select nome,marco 
-from vendedores
-where marco = (select min(marco)from vendedores);
-
---SUBQUERY SELECIONANDO A MEDIA DO VALOR DAS VENDAS 
-
-select nome, marco
-from vendedores
-where marco > (select avg(marco)from vendedores);
-
-select nome, fevereiro
-from vendedores
-where fevereiro > (select avg(fevereiro)from vendedores);
-
-select nome, janeiro
-from vendedores
-where janeiro > (select avg(janeiro)from vendedores);
 
 
 
